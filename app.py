@@ -3,26 +3,32 @@ import streamlit.components.v1 as components
 
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import networkx as nx
 from pyvis.network import Network
-import time
 
-st.title('Network visualization of drug-drug interactions')
-
+# Read data
 df_interactions = pd.read_csv('data/processed_drug_interactions.csv')
 
+# Set header title
+st.title('Network visualization of drug-drug interactions')
+
+# Add sidebar
 # st.sidebar.title('Sidebar Menu')
+
+# Define list of selection options
 drug_list = ['Metformin', 'Lisinopril', 'Simvastatin']
+
+# Implement multiselect options for users (output is a list)
 selected_drugs = st.multiselect('Select drugs to visualize', drug_list)
 
 if len(selected_drugs) == 0:
+    # Show the following text upon initial site load
     st.text('Please choose at least 1 drug')
 else:
     df_selected = df_interactions.loc[df_interactions['drug_1_name'].isin(selected_drugs) | df_interactions['drug_2_name'].isin(selected_drugs)]
     df_selected = df_selected.reset_index(drop=True)
 
-    # Graphs settings
+    # Pyvis graph settings
     layout='barnes_hut'
     central_gravity=0.15
     node_distance=420
