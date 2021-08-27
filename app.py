@@ -74,7 +74,7 @@ else:
 
     # Save and load graph as HTML file (locally)
     except:
-        path = './tmp'
+        path = '/html_files'
         drug_net.save_graph(f'{path}/pyvis_graph.html')
         HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
