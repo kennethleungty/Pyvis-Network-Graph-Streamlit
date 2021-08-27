@@ -1,5 +1,7 @@
 # Deploy Interacitve Pyvis Network Graphs on Streamlit
 
+Link to deployed app: https://share.streamlit.io/kennethleungty/pyvis-network-graph-streamlit/main/app.py
+
 ### Step 1
 - Install Streamlit, Pyvis and NetworkX packages (See `requirements.txt`)
 
