@@ -41,7 +41,7 @@ else:
 
     # Initiate PyVis network object
     drug_net = Network(
-                       height='450px',
+                       height='420px',
                        width='100%',
                        bgcolor=bgcolor,
                        font_color=font_color,
