@@ -61,10 +61,10 @@ else:
                    )
 
     # Save graph as HTML file
-    drug_net.save_graph('./html_files/pyvis_network_graph.html')
+    drug_net.save_graph('/tmp/pyvis_network_graph.html')
 
     # Load HTML file
-    HtmlFile = open('./html_files/pyvis_network_graph.html', 'r', encoding='utf-8')
+    HtmlFile = open('/tmp/pyvis_network_graph.html', 'r', encoding='utf-8')
     source_code = HtmlFile.read()
     components.html(source_code, height=500, width=695)
 
