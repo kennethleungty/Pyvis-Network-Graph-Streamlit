@@ -21,12 +21,15 @@ drug_list = ['Metformin', 'Glipizide', 'Lisinopril', 'Simvastatin',
             'Ibuprofen']
 drug_list.sort()
 
-# Implement multiselect options for users (output is a list)
+# Implement multiselect options for users (returns a list)
 selected_drugs = st.multiselect('Select drug(s) to visualize', drug_list)
 
+# Set display for initial state
 if len(selected_drugs) == 0:
     # Show the following text upon initial site load
     st.text('Please choose at least 1 drug')
+
+# Create network graph when user selects >= 1 item
 else:
     df_selected = df_interactions.loc[df_interactions['drug_1_name'].isin(selected_drugs) | df_interactions['drug_2_name'].isin(selected_drugs)]
     df_selected = df_selected.reset_index(drop=True)
@@ -63,28 +66,27 @@ else:
                     damping=damping
                    )
 
-    # Save and load graph as HTML file (on streamlit sharing)
+    # Save and load graph as HTML file (on Streamlit Sharing)
     try:
         path = '/tmp'
         drug_net.save_graph(f'{path}/pyvis_graph.html')
         HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
+
+    # Save and load graph as HTML file (locally)
     except:
         path = './tmp'
         drug_net.save_graph(f'{path}/pyvis_graph.html')
         HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
+    # Read and load HTML file for display on Streamlit page
     source_code = HtmlFile.read()
     components.html(source_code, height=500, width=695)
 
-# st.button("Generate graph")
 st.markdown(
     """
     <br>
-    <h6><a href="https://github.com/kennethleungty" target="_blank">Link to project GitHub repo</a></h6>
+    <h6><a href="https://kennethleungty.medium.com" target="_blank">Medium article</a></h6>
+    <h6><a href="https://github.com/kennethleungty/Pyvis-Network-Graph-Streamlit" target="_blank">Project GitHub repo</a></h6>
     <h6><a href="https://github.com/kennethleungty" target="_blank">Created by Kenneth Leung</a></h6>
     """, unsafe_allow_html=True,
 )
-
-# References
-# https://github.com/napoles-uach/streamlit_network/blob/main/app.py
-# https://discuss.streamlit.io/t/select-an-item-from-multiselect-on-the-sidebar/1276/2
