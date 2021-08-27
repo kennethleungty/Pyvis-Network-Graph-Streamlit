@@ -17,7 +17,8 @@ st.title('Network Visualization of Drug-Drug Interactions')
 
 # Define list of selection options
 drug_list = ['Metformin', 'Glipizide', 'Lisinopril', 'Simvastatin',
-            'Warfarin', 'Phenytoin']
+            'Warfarin', 'Aspirin', 'Losartan', 'Acetaminophen',
+            'Ibuprofen']
 drug_list.sort()
 
 # Implement multiselect options for users (output is a list)
@@ -32,11 +33,11 @@ else:
 
     # Pyvis graph settings
     layout='barnes_hut'
-    central_gravity=0.15
+    central_gravity=0.33
     node_distance=420
-    spring_length=100
-    spring_strength=0.15
-    damping=0.96
+    spring_length=110
+    spring_strength=0.10
+    damping=0.95
     bgcolor, font_color = '#222222', 'white'
 
     G = nx.from_pandas_edgelist(df_selected, 'drug_1_name', 'drug_2_name', 'weight')
