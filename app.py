@@ -16,7 +16,7 @@ st.title('Network visualization of drug-drug interactions')
 # st.sidebar.title('Sidebar Menu')
 
 # Define list of selection options
-drug_list = ['Metformin', 'Lisinopril', 'Simvastatin']
+drug_list = ['Metformin', 'Lisinopril', 'Simvastatin', 'Warfarin']
 
 # Implement multiselect options for users (output is a list)
 selected_drugs = st.multiselect('Select drugs to visualize', drug_list)
