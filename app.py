@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-
+import os
 import pandas as pd
 import numpy as np
 import networkx as nx
@@ -62,11 +62,16 @@ else:
                     damping=damping
                    )
 
-    # Save graph as HTML file
-    drug_net.save_graph('/tmp/pyvis_network_graph.html')
+    # Save and load graph as HTML file (on streamlit sharing)
+    try:
+        path = '/tmp'
+        drug_net.save_graph(f'{path}/pyvis_graph.html')
+        HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
+    except:
+        path = './tmp'
+        drug_net.save_graph(f'{path}/pyvis_graph.html')
+        HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
-    # Load HTML file
-    HtmlFile = open('/tmp/pyvis_network_graph.html', 'r', encoding='utf-8')
     source_code = HtmlFile.read()
     components.html(source_code, height=500, width=695)
 
