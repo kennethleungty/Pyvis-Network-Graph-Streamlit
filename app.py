@@ -10,16 +10,18 @@ from pyvis.network import Network
 df_interactions = pd.read_csv('data/processed_drug_interactions.csv')
 
 # Set header title
-st.title('Network visualization of drug-drug interactions')
+st.title('Network Visualization of Drug-Drug Interactions')
 
 # Add sidebar
 # st.sidebar.title('Sidebar Menu')
 
 # Define list of selection options
-drug_list = ['Metformin', 'Lisinopril', 'Simvastatin', 'Warfarin']
+drug_list = ['Metformin', 'Glipizide', 'Lisinopril', 'Simvastatin',
+            'Warfarin', 'Phenytoin']
+drug_list.sort()
 
 # Implement multiselect options for users (output is a list)
-selected_drugs = st.multiselect('Select drugs to visualize', drug_list)
+selected_drugs = st.multiselect('Select drug(s) to visualize', drug_list)
 
 if len(selected_drugs) == 0:
     # Show the following text upon initial site load
@@ -72,8 +74,9 @@ else:
 st.markdown(
     """
     <br>
-    <br>
-    <h6><a href="https://github.com/kennethleungty" target="_blank">Created by Kenneth Leung</a></h6>""", unsafe_allow_html=True,
+    <h6><a href="https://github.com/kennethleungty" target="_blank">Link to project GitHub repo</a></h6>
+    <h6><a href="https://github.com/kennethleungty" target="_blank">Created by Kenneth Leung</a></h6>
+    """, unsafe_allow_html=True,
 )
 
 # References
