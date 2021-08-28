@@ -21,7 +21,7 @@ selected_drugs = st.multiselect('Select drug(s) to visualize', drug_list)
 
 # Set info message on initial site load
 if len(selected_drugs) == 0:
-    st.text('Please choose at least 1 drug to get started')
+    st.text('Choose at least 1 drug to start')
 
 # Create network graph when user selects >= 1 item
 else:
@@ -34,7 +34,7 @@ else:
 
     # Initiate PyVis network object
     drug_net = Network(
-                       height='465px',
+                       height='400px',
                        width='100%',
                        bgcolor='#222222',
                        font_color='white'
@@ -65,7 +65,10 @@ else:
         HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
     # Load HTML file in HTML component for display on Streamlit page
-    components.html(HtmlFile.read(), height=500, width=700)
+    components.html(HtmlFile.read(),
+                    height=435,
+                    # width=700
+                    )
 
 # Footer
 st.markdown(
