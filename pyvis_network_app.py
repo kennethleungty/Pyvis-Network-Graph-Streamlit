@@ -1,7 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
-import numpy as np
 import networkx as nx
 from pyvis.network import Network
 
@@ -65,10 +64,7 @@ else:
         HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
     # Load HTML file in HTML component for display on Streamlit page
-    components.html(HtmlFile.read(),
-                    height=435,
-                    # width=700
-                    )
+    components.html(HtmlFile.read(), height=435)
 
 # Footer
 st.markdown(
