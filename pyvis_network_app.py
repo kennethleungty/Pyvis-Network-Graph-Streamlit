@@ -67,11 +67,11 @@ else:
     components.html(HtmlFile.read(), height=435)
 
 # Footer
-st.markdown(
-    """
-    <br>
-    <h6><a href="https://github.com/kennethleungty/Pyvis-Network-Graph-Streamlit" target="_blank">Project GitHub repo</a></h6>
-    <h6><a href="https://kennethleungty.medium.com" target="_blank">Medium article</a></h6>
-    <h6><a href="https://github.com/kennethleungty" target="_blank">Created by Kenneth Leung</a></h6>
-    """, unsafe_allow_html=True
-    )
+# st.markdown(
+#     """
+#     <br>
+#     <h6><a href="https://github.com/kennethleungty/Pyvis-Network-Graph-Streamlit" target="_blank">Project GitHub repo</a></h6>
+#     <h6><a href="https://kennethleungty.medium.com" target="_blank">Medium article</a></h6>
+#     <h6><a href="https://github.com/kennethleungty" target="_blank">Created by Kenneth Leung</a></h6>
+#     """, unsafe_allow_html=True
+#     )
