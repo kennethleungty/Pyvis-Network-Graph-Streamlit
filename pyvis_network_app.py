@@ -70,9 +70,8 @@ else:
 st.markdown(
     """
     <br>
-    <h6><a href="https://github.com/kennethleungty/Pyvis-Network-Graph-Streamlit" target="_blank">Project GitHub repo</a></h6>
+    <h6><a href="https://github.com/kennethleungty/Pyvis-Network-Graph-Streamlit" target="_blank">GitHub Repo</a></h6>
     <h6><a href="https://kennethleungty.medium.com" target="_blank">Medium article</a></h6>
-    <h6><a href="https://github.com/kennethleungty" target="_blank">Created by Kenneth Leung</a></h6>
     <h6>Disclaimer: This app is NOT intended to provide any form of medical advice or recommendations. Please consult your doctor or pharmacist for professional advice relating to any drug therapy.</h6>
     """, unsafe_allow_html=True
     )
