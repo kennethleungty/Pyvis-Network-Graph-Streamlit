@@ -1,4 +1,4 @@
-# Deploy Interacitve Pyvis Network Graphs on Streamlit
+# Deploy Interactive Pyvis Network Graphs on Streamlit
 
 Link to app: https://share.streamlit.io/kennethleungty/pyvis-network-graph-streamlit/main/pyvis_network_app.py
 Link to article: https://towardsdatascience.com/how-to-deploy-interactive-pyvis-network-graphs-on-streamlit-6c401d4c99db
