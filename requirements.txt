@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-# networkx==2.5.1
-# numpy==1.21.1
-# pandas==1.2.4
-# pyvis==0.1.9
-# streamlit==0.83.0
 networkx
 numpy
 pandas
 pyvis
 streamlit
-
-=======
-networkx==2.5.1
-numpy~>1.22
-pandas==1.2.4
-pyvis==0.1.9
-streamlit==0.83.0
->>>>>>> 5a31ee8bdd1c59e22879e7e8b4565b77fab5371d
