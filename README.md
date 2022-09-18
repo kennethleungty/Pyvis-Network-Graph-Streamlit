@@ -3,6 +3,8 @@
 Link to app: https://share.streamlit.io/kennethleungty/pyvis-network-graph-streamlit/main/pyvis_network_app.py  
 Link to article: https://towardsdatascience.com/how-to-deploy-interactive-pyvis-network-graphs-on-streamlit-6c401d4c99db
 
+![demo-gif](https://github.com/kennethleungty/Pyvis-Network-Graph-Streamlit/blob/main/demo/demo_gif_sm.gif)
+
 ### Step 1
 - Install Streamlit, Pyvis and NetworkX packages (See `requirements.txt`)
 
