@@ -1,5 +1,5 @@
-networkx
-numpy
-pandas
-pyvis
-streamlit
+networkx==2.8.6
+numpy==1.23.3
+pandas==1.4.4
+pyvis==0.2.1
+streamlit==1.12.2
