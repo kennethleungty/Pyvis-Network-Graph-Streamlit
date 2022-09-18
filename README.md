@@ -9,6 +9,6 @@ Link to app: https://share.streamlit.io/kennethleungty/pyvis-network-graph-strea
 - Open CLI and change directory to local path of this repo e.g. `cd 'C:/GitHub/Pyvis-Network-Graph-Streamlit'`
 
 ### Step 3
-- In CLI, execute `streamlit run app.py`
+- In CLI, execute `streamlit run pyvis_network_app.py`
 
 
